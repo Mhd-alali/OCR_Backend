@@ -55,5 +55,9 @@ app.post('/ocr', upload.single('image'), async (req, res) => {
     }
 })
 
+app.get('/',(req,res)=>{
+res.json({message:"welcome to the ocr api"})
+})
+
 const PORT = process.env.PORT || 3002
 app.listen(PORT, () => console.log(`Server is running at http://localhost:${PORT}`));
